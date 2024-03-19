@@ -1,0 +1,7 @@
+For the session user, we are taking user input as the name and simply setting 
+the input value as the name. Attackers could input code snippets instead of a name, leading to tampering.
+
+In the secure.js file, the escapeHTML function checks the input for code snippets and converts everything to strings. 
+We can use libraries in express to clean the inputs or define them ourselves. 
+
+Tampering violates integrity as the attackers are causing unintended actions by changing input. 
