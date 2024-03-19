@@ -1,1 +1,13 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+Spoofing violates confidentiality and integrity as unauthorized users can access information and potentially modify them. 
+
+In the insecure.js, the session ID will be sent everytime the user connects to the client as a cookie. 
+The cookies are generated on the server side, stored in memory on the server, sent as a cookie to the client.
+The key security resource is the token (the cookie). All end points are protected by the session ID, 
+but malicious users can copy the session ID from the cookie and use it, for example, through phishing emails. 
+
+The changes made in secure.js make sure that host/server have the same origin. This helps prevent 
+phishing and other mal-form attacks demonstrated in the examples. 
+Setting cookie httpOnly: true prevents cross-site scripting attacks since the session cookie
+is accessible only through HTTP requests. 
