@@ -1,3 +1,10 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The example demonstrates how an attacker can gain unauthorized access to the user database. 
+This violates confidentiality. 
+Userinfo is using a Mongo query to access the database. 
+The username is coming from an external source, so malicious code/query may be included in the username.
+In the example discussed in class, the malicious user is using a regular expression to pull all usernames that are not blank
+spaces. The system should sanitize and ensure that only strings are accepted. 
