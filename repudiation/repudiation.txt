@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Repudiation refers to the proper logging of system actions so the server can hold users accountable for their actions.
+In secure.js, the middleware function is going to create a log entry with a timestamp, 
+the req.method, the req.url, and the IP. The entry will be written into a private log. 
+This allows for the server to monitor users and their actions to make sure that errors/malicious actions
+are handled properly. 
