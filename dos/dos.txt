@@ -1,2 +1,9 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+In a DOS attack, malicious users can overwhelm the server with high volume of requests or exploit vulnerabilities in the server. 
+This denial of service violates CIA. 
+
+Even though for Mongo generates IDs and indexes the IDs for queries (such as ID identification), we still need to sanitize the input. 
+Unsanitized inputs can cause the server to crash. The secure.js uses a try/catch block to handle errors instead of crashing the server.
+We should use a rate limiting middleware that will ensure requests don't exceed a certain amount that would crash the server.
