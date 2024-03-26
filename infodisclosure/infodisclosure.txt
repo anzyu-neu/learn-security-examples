@@ -8,3 +8,5 @@ Userinfo is using a Mongo query to access the database.
 The username is coming from an external source, so malicious code/query may be included in the username.
 In the example discussed in class, the malicious user is using a regular expression to pull all usernames that are not blank
 spaces. The system should sanitize and ensure that only strings are accepted. 
+We can include further authentification, monitor console logs, and use encryption for storage/transit of sensitive information
+as additional security mechanisms. 
