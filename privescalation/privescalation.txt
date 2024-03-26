@@ -1,0 +1,3 @@
+In privilege escalation, there is unauthorized elevation of privilege, granting access to resources or actions beyond level of authorization. 
+
+Ways to secure the server include strong authentification (2FA, using sessions).
